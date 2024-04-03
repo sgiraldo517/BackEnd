@@ -1,0 +1,11 @@
+{
+  "name": "projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --watch desafio_2/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
