@@ -2,7 +2,7 @@ const fs = require('fs').promises;
 
 class ProductManager {
     constructor() {
-        this.path = "desafio_2/productos.json"
+        this.path = "desafio_3/src/productos.json"
     }
 
     async addProduct(title, description, price, thumbnail, code, stock) {
@@ -30,7 +30,7 @@ class ProductManager {
         try {
             return await this.traerProductos()
         } catch (e) {
-            console.error("Error al consultar usuarios", e)
+            console.error("Error al consultar productos", e)
             return []
         }
     }
@@ -40,10 +40,10 @@ class ProductManager {
             let products = await this.traerProductos()
             const producto_buscado = products.find((prod) => prod.id === id)
             if(!producto_buscado) {
-                console.log(`Error: El producto con el id ${id} no existe en la base de datos.`);
-                return
+                const mensaje = { mensaje: `Error: El producto con el id ${id} no existe en la base de datos.` };
+                return mensaje
             }
-            console.log(producto_buscado);
+            return producto_buscado;
         } catch (e) {
             console.error("Error al consultar productos por id", e)
         }
@@ -96,12 +96,5 @@ class ProductManager {
 
 }
 
+module.exports = ProductManager
 
-// const productManager = new ProductManager()
-// productManager.getProducts()
-//     .then(products => console.log(products))
-//     .catch(error => console.error("Error al consultar usuarios", error))
-// productManager.addProduct("producto prueba", "Este es un producto prueba", 200, "Sin imagen", "abc123", 25)
-// productManager.getProductById(5)
-// productManager.deleteProduct(2)
-// productManager.updateProduct(5, { description: "La mejor descripcion", code: "BananoConLeche" });
