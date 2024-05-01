@@ -1,0 +1,70 @@
+<section class="border rounded-4 shadow p-4 m-4">
+    <h1 class="text-center py-2">Agregar Producto</h1>
+    <form class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="nombreProducto" class="form-label">Nombre del Producto: </label>
+                    <input type="text" class="form-control" id="nombreProducto" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="descripcionProducto" class="form-label">Descripcion: </label>
+                    <input type="text" class="form-control" id="descripcionProducto" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="codeProducto" class="form-label">Code: </label>
+                    <input type="text" class="form-control" id="codeProducto" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="priceProducto" class="form-label">Precio: </label>
+                    <input type="number" class="form-control" id="priceProducto" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="stockProducto" class="form-label">Stock: </label>
+                    <input type="number" class="form-control" id="stockProducto" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="categoriaProducto" class="form-label">Categoria: </label>
+                    <input type="text" class="form-control" id="categoriaProducto" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="thumbnailProducto" class="form-label">Thumbnail: </label>
+                    <input type="text" class="form-control" id="thumbnailProducto">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="statusProducto" checked>
+                    <label class="form-check-label" for="statusProducto">Status</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+</section>
+
+<section id="realTimeViewProducts">
+
+</section>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
+
