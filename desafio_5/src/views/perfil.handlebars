@@ -1,0 +1,23 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <ul class="nav nav-underline m-3">
+        <li class="nav-item">
+            <a class="nav-link" href="/products">Productos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Ver perfil</a>
+        </li>
+    </ul>
+</nav>
+<div class="d-flex justify-content-center align-items-center m-5">
+    <div class="w-50 border rounded-4 p-5">
+        <h2 class="text-center">Perfil de Usuario</h2>
+        <p>Nombre: {{user.first_name}}</p>
+        <p>Apellido: {{user.last_name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Edad: {{user.age}}</p>
+        <p>Rol: {{user.rol}}</p>
+        <form action="/api/sessions/logout" method="POST">
+            <button type="submit" class="btn btn-primary w-100">Cerrar Sesión</button>
+        </form>
+    </div>
+</div>
